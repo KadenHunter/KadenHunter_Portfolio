@@ -3,15 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Kaden Hunter, an Interactive Computing student at Ulster University seeking a 12-month industrial placement for 2027/2028.">
   <title>Kaden Hunter | Portfolio</title>
 
+  <!-- Favicons (put these files in the same folder as index.html) -->
+  <link rel="icon" href="favicon.ico?v=2" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=2">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
   <header>
-    <nav>
-      <a class="logo" href="#home">Kaden Hunter</a>
+    <nav aria-label="Main navigation">
+      <a class="logo" href="#home" aria-label="Kaden Hunter, back to top">
+        <span class="logo-mark">KH</span>
+        <span class="logo-name">Kaden Hunter</span>
+      </a>
 
       <div class="nav-links">
         <a href="#about">About</a>
@@ -23,37 +38,41 @@
 
   <main>
     <section id="home" class="hero">
-      <p class="eyebrow">Interactive Computing Student</p>
-      <h1>Kaden<br>Hunter.</h1>
+      <h1>Kaden<br>Hunter</h1>
 
       <p class="hero-text">
         Ulster University student seeking a 12-month industrial placement for
         the 2027/2028 academic year.
       </p>
 
-      <a class="button" href="#projects">View my work</a>
+      <div class="hero-actions">
+        <a class="button" href="#projects">View my work</a>
+
+        <!-- TODO: replace "#" with your CV path, e.g. files/KadenHunter_CV.pdf -->
+        <a class="button button-secondary" href="#" download>Download my CV</a>
+      </div>
     </section>
 
     <section id="about">
-      <p class="eyebrow">About me</p>
-      <h2>Creative thinking, built with technology.</h2>
+      <h2>About</h2>
 
-      <p class="about-text">
-        I am an Interactive Computing student at Ulster University, achieving a
-        First-class overall result in my first year. I am currently seeking a
-        12-month industrial placement for 2027/2028, with a strong foundation
-        in programming, SQL, data handling, and UX/UI design.
-      </p>
+      <div class="about-copy">
+        <p class="about-text">
+          I am an Interactive Computing student at Ulster University, achieving a
+          First-class overall result in my first year. I am currently seeking a
+          12-month industrial placement for 2027/2028, with a strong foundation
+          in programming, SQL, data handling, and UX/UI design.
+        </p>
 
-      <p class="about-text">
-        I am particularly interested in software engineering, UX/UI, and digital
-        content creation. I enjoy combining technical and creative skills to
-        build thoughtful, user-focused digital solutions.
-      </p>
+        <p class="about-text">
+          I am particularly interested in software engineering, UX/UI, and digital
+          content creation. I enjoy combining technical and creative skills to
+          build thoughtful, user-focused digital solutions.
+        </p>
+      </div>
     </section>
 
     <section id="projects">
-      <p class="eyebrow">Selected work</p>
       <h2>Projects</h2>
 
       <article class="project">
@@ -61,14 +80,19 @@
           <p class="project-number">01</p>
           <h3>Database Project</h3>
           <p>
-            A walkthrough of my database project, demonstrating database design,
-            SQL skills, and data handling. This work achieved an overall mark of
-            <strong>96%</strong> in the module.
+            I designed and implemented a relational database for a business scenario,
+            from initial planning through to a working SQL solution. This included
+            producing an ER diagram and a third-normal-form relational schema, then
+            creating, populating, and testing the database using SQL. My video
+            walkthrough demonstrates the table relationships, keys, constraints, and
+            SQL queries used to support key business processes. This project
+            strengthened my skills in database design, SQL development, and data
+            handling, and achieved an overall mark of 96%.
           </p>
         </div>
 
         <div class="project-content">
-          <video controls>
+          <video controls preload="metadata">
             <source src="media/databaseProject.mp4" type="video/mp4">
             Your browser does not support this video.
           </video>
@@ -78,40 +102,52 @@
       <article class="project">
         <div class="project-info">
           <p class="project-number">02</p>
-          <h3>Still & Moving Images</h3>
+          <h3>Still &amp; Moving Images</h3>
           <p>
-            A multimedia project created using Adobe Premiere Pro, Photoshop,
-            Illustrator, and Adobe Audition. It combines visual design, video
-            editing, sound, planning, and promotional content.
+            I developed a promotional design campaign for a Bentley Continental GT3
+            racing team, centred on the United Nations Sustainable Development Goal
+            14: Life Below Water. The project included an A0 event poster, a custom
+            car livery, a 360-degree vehicle rotation, and a storyboard-led
+            45-second advertisement set at Spa-Francorchamps.
+          </p>
+
+          <p>
+            I used Adobe Illustrator and Photoshop to create the poster and livery,
+            before using Adobe Premiere Pro and Adobe Audition to edit the
+            advertisement and produce its sound design. To create footage for the
+            final video, I drove the Spa-Francorchamps circuit in a racing simulator
+            and captured clips for use in the advert. The final livery was produced
+            as a layered Photoshop PSD file, which is too large to host here, but is
+            showcased in the car-rotation video.
           </p>
         </div>
 
         <div class="project-links">
-          <a href="files/mindmap.pdf" target="_blank">
+          <a href="files/mindmap.pdf" target="_blank" rel="noopener noreferrer">
             View mind map <span>↗</span>
           </a>
 
-          <a href="files/poster.pdf" target="_blank">
+          <a href="files/poster.pdf" target="_blank" rel="noopener noreferrer">
             View promotional poster <span>↗</span>
           </a>
 
-          <a href="media/carRotation.mp4" target="_blank">
+          <a href="media/carRotation.mp4" target="_blank" rel="noopener noreferrer">
             Watch car rotation <span>↗</span>
           </a>
 
-          <a href="files/designJustification.pdf" target="_blank">
+          <a href="files/designJustification.pdf" target="_blank" rel="noopener noreferrer">
             View design justification <span>↗</span>
           </a>
 
-          <a href="files/storyboard.pdf" target="_blank">
+          <a href="files/storyboard.pdf" target="_blank" rel="noopener noreferrer">
             View storyboard <span>↗</span>
           </a>
 
-          <a href="media/advertisementVideo.mp4" target="_blank">
+          <a href="media/advertisementVideo.mp4" target="_blank" rel="noopener noreferrer">
             Watch advertisement <span>↗</span>
           </a>
 
-          <a href="files/report.pdf" target="_blank">
+          <a href="files/report.pdf" target="_blank" rel="noopener noreferrer">
             View project report <span>↗</span>
           </a>
         </div>
@@ -120,46 +156,112 @@
       <article class="project">
         <div class="project-info">
           <p class="project-number">03</p>
-          <h3>UX/UI Design Project</h3>
+          <h3>Human Computer Interaction Project</h3>
           <p>
-            A group project exploring user experience and user interface design,
-            including research, design decisions, and the final outcome.
+            This UX/UI project explored how design decisions affect usability,
+            accessibility, and the overall user experience. For the individual
+            presentation, I critically compared two websites as examples of good and
+            poor UX, using HCI principles and research to support my evaluation.
+          </p>
+
+          <p>
+            As part of a group report, I helped develop a structured framework based
+            on usability heuristics, accessibility, colour, and semiotics. I then
+            applied this framework to evaluate a website and produce practical
+            recommendations for improvement. The project strengthened my skills in
+            user-centred design, critical analysis, research, and communicating
+            design decisions.
           </p>
         </div>
 
         <div class="project-links">
-          <a href="files/ux:uiGroupReport.pdf" target="_blank">
-            View UX/UI group report <span>↗</span>
+          <!-- %3A is how a link writes ":" so these match your current file names.
+               If you rename the files to uxUiPresentation.pdf / uxUiGroupReport.pdf,
+               change "ux%3Aui" to "uxUi" in both links. -->
+          <a href="files/ux%3AuiPresentation.pdf" target="_blank" rel="noopener noreferrer">
+            View UX/UI presentation <span>↗</span>
           </a>
 
-          <!-- Add the compressed UX/UI video here later:
-          <a href="media/ux:uiVideo.mp4" target="_blank">
-            Watch UX/UI video <span>↗</span>
+          <a href="files/ux%3AuiGroupReport.pdf" target="_blank" rel="noopener noreferrer">
+            View UX/UI group report <span>↗</span>
           </a>
-          -->
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-info">
+          <p class="project-number">04</p>
+          <h3>The Daily Cup</h3>
+          <p>
+            As part of a group, I developed The Daily Cup, a contemporary website
+            for a café brand. The project focused on creating a clear and accessible
+            user experience through structured HTML, responsive CSS, and JavaScript
+            interactivity.
+          </p>
+
+          <p>
+            The website includes a contact form with client-side validation and
+            interactive features designed to improve usability. This project
+            strengthened my experience of working collaboratively with version
+            control, applying UX principles, and building a complete front-end
+            website from planning through to implementation.
+          </p>
+        </div>
+
+        <div class="project-links">
+          <a
+            href="https://github.com/KadenHunter/TheDailyCup_Website"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View project on GitHub <span>↗</span>
+          </a>
         </div>
       </article>
     </section>
 
     <section id="contact">
-      <p class="eyebrow">Get in touch</p>
-      <h2>Let’s connect.</h2>
+      <h2>Contact</h2>
 
-      <!-- Replace this with your real email address -->
-      <a class="email-link" href="mailto:your-email@example.com">
-        your-email@example.com
-      </a>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <p class="contact-label">Email</p>
 
-      <p class="contact-links">
-        <!-- Replace these with your real links -->
-        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-      </p>
+          <a class="contact-email" href="mailto:Hunter-K25@ulster.ac.uk">
+            Hunter-K25@ulster.ac.uk
+          </a>
+
+          <a class="contact-email" href="mailto:Kadenhunta2006@gmail.com">
+            Kadenhunta2006@gmail.com
+          </a>
+        </div>
+
+        <div class="contact-card">
+          <p class="contact-label">Connect</p>
+
+          <a
+            class="contact-social"
+            href="https://github.com/KadenHunter"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub <span>↗</span>
+          </a>
+
+          <a
+            class="contact-social"
+            href="https://www.linkedin.com/in/kaden-hunter/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn <span>↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- TODO: replace "#" with your CV path, e.g. files/KadenHunter_CV.pdf -->
+      <a class="button contact-cv" href="#" download>Download my CV</a>
     </section>
   </main>
-
-  <footer>
-    <p>© 2026 Kaden Hunter</p>
-  </footer>
 </body>
 </html>
